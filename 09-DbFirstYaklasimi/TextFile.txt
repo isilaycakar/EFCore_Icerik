@@ -1,0 +1,15 @@
+﻿
+Scaffold-DbContext "server=ISILAY;database=Northwind;Trusted_Connection=true;TrustServerCertificate=true" Microsoft.EntityFrameworkCore.SqlServer -outputdir Models
+
+Scaffold-DbContext Parametreleri
+
+"Connection_String"				= database için ilgili sql server connection string buraya yazılır.
+-outputdir Models				= classların oluşmasını istediğiniz bir klasör varsa buraya yazılır.
+-Context NorthwindDbContext     = Context classının ismi bu parametre ile belirlenebilir.
+-DataAnnotations				= kolonlara ait veri koşullarının da koda eklenmesini sağlar.
+-Force							= bu komut varsa, var olan classlar silinerek yerine yenileri oluşturulur.
+-Project ProjeAdi				= Hangi projenin içerisine oluşturmak istediğimizi belirtiyoruz.
+
+
+Güncellemek için
+Scaffold-DbContext "server=ISILAY;database=Northwind;Trusted_Connection=true;TrustServerCertificate=true" Microsoft.EntityFrameworkCore.SqlServer -outputdir Models -force -DataAnnotations
